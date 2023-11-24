@@ -1,22 +1,26 @@
+#pragma once
 #include<SDL.h>
-#include "pigeon.hpp"
-#include "bee.hpp"
-#include "butterfly.hpp"
+#include "ObjectCreator.hpp"
+#include "Unit.hpp"
+// #include "pigeon.hpp"
+// #include "bee.hpp"
+// #include "butterfly.hpp"
 #include<vector>
 #include<list>
 using namespace std;
 
 class HUMania{
 
-    //Right now we're creating one pigeon, just for practice. for details follow the guidlines 
-    Pigeon p1;
+    //initialisation of object creator
+    ObjectCreator creator;
+    //initialization of object list
+    list<Unit*> objectList;
+public:
 
-    //Create your list here
-    public:
 
     
     void drawObjects(); 
     void createObject(int, int);
+    ~HUMania(); //destructor
     
-    // create destructor which deletes all dynamic objects
 };
